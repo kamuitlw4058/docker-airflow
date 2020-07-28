@@ -20,6 +20,6 @@ services:
 
         volumes:
             - ./dags:/opt/airflow/dags:z
-#            - ./plugins:/opt/airflow/plugins:z
+            - ./plugins:/opt/airflow/plugins:z
 #            - ./volumes/airflow_data_dump:/opt/airflow/data_dump:z
 #            - ./volumes/airflow_logs:/opt/airflow/logs:z
