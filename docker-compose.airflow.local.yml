@@ -9,12 +9,15 @@ services:
             dockerfile: Dockerfile
         restart: always
         environment:
+            - TZ=Asia/Shanghai
             - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
             - AIRFLOW__CORE__FERNET_KEY=KPr56n1SCB9uoco1cjT0Nyr-dKopjaRsNK0K_bBYpZQ=
             - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-            - AIRFLOW__CORE__DEFAULT_TIMEZONE=system
+            - AIRFLOW__CORE__DEFAULT_TIMEZONE=Asia/Shanghai
             - AIRFLOW__CORE__LOAD_EXAMPLES=True
             - AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS=True
+            - AIRFLOW__WEBSERVER__DEFAULT_UI_TIMEZONE=Asia/Shanghai
+
         volumes:
             - ./dags:/opt/airflow/dags:z
 #            - ./plugins:/opt/airflow/plugins:z
