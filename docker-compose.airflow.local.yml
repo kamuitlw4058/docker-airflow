@@ -14,7 +14,7 @@ services:
             - AIRFLOW__CORE__FERNET_KEY=KPr56n1SCB9uoco1cjT0Nyr-dKopjaRsNK0K_bBYpZQ=
             - AIRFLOW__CORE__EXECUTOR=LocalExecutor
             - AIRFLOW__CORE__DEFAULT_TIMEZONE=Asia/Shanghai
-            - AIRFLOW__CORE__LOAD_EXAMPLES=True
+            - AIRFLOW__CORE__LOAD_EXAMPLES=False
             - AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS=True
             - AIRFLOW__WEBSERVER__DEFAULT_UI_TIMEZONE=Asia/Shanghai
 
